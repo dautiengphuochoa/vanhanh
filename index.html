@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vận hành Hồ Dầu Tiếng</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style-landing.css">
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 </head>
@@ -21,25 +19,15 @@
         <h1 class="mt-3">THÔNG TIN VẬN HÀNH HỒ DẦU TIẾNG</h1>
                         <h4 class="">THỜI GIAN 🕐 </h4>
                         <p class="mb-3 fs-4"><span id="giohientai"></span>; Ngày: <span id="ngayhientai"></span> </p>
-                        <script>
-                            var today = new Date();
-                            var time = today.getHours() + " : " + today.getMinutes() + " : " + today.getSeconds();
-                            document.getElementById("giohientai").innerHTML = time;
-                        </script>
-                        <script>
-                            var today = new Date();
-                            var date = today.getDate()+' / '+(today.getMonth()+1)+' / '+today.getFullYear();
-                            document.getElementById("ngayhientai").innerHTML = date;
-                        </script>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-pastel-1 text-black mb-4">
                                     <div class="card-body fw-bold">DUNG TÍCH HỒ ⛲</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <p>Hiện tại: </p>
-                                        <h4>20.66 m</h4>
-                                        <p>Dự báo 72 giờ tới:</p>
-                                        <h4>21.3 m</h4>
+                                        <p class="fw-bold text-success fs-5">889 tr.m³/s</p>
+                                        <p>Dự báo 72h tới:</p>
+                                        <p class="fw-bold">914.79 tr.m³/s</p>
                                     </div>
                                 </div>
                             </div>
@@ -48,37 +36,37 @@
                                     <div class="card-body fw-bold">MỰC NƯỚC HỒ 📈</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <p>Hiện tại: </p>
-                                        <h4 id="wrapper-GiaTri"></h4>
-                                        <p>Dự báo 72 giờ tới:</p>
-                                        <h4>21.3 m</h4>
+                                        <p class="fw-bold text-success fs-5" id="wrapper-GiaTri"></p>
+                                        <p>Dự báo 72h tới:</p>
+                                        <p class="fw-bold">21.3 m</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-pastel-3 text-black mb-4">
-                                    <div class="card-body fw-bold">DÒNG CHẢY ĐẾN 🌊 </div>
+                                    <div class="card-body fw-bold">DÒNG CHẢY ĐẾN ⬅️ </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <p>Hiện tại: </p>
-                                        <h4>20.66 m</h4>
-                                        <p>Dự báo 72 giờ tới:</p>
-                                        <h4>21.3 m</h4>
+                                        <p class="fw-bold text-success fs-5">36.19 m³/s</p>
+                                        <p>Dự báo 72h tới:</p>
+                                        <p class="fw-bold">260.50 m³/s</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-pastel-4 text-black mb-4">
-                                    <div class="card-body fw-bold">LƯỢNG MƯA 💦</div>
+                                    <div class="card-body fw-bold">DÒNG CHẢY ĐI ➡️</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <p>Hiện tại: </p>
-                                        <h4>20.66 m</h4>
-                                        <p>Trung bình 3 ngày qua:</p>
-                                        <h4>21.3 m</h4>
+                                        <p class="fw-bold text-success fs-5">0 m³/s</p>
+                                        <p>Dự báo 72h tới:</p>
+                                        <p class="fw-bold">0 m³/s</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card mb-4">
+                        <!-- <div class="card mb-4">
                             <div class="card-header fs-3">
                                 <i class="fas fa-table me-1"></i>
                                 TRẠM QUAN TRẮC
@@ -94,9 +82,325 @@
                                     </thead>
                                     <tbody id="table-body">
                                     </tbody>
+                                    <tfoot class="sticky-footer">
+                                        <tr>
+                                          <td colspan="3">All text you were puting here was shown at the top of the page outside of the table but now it is not.</td>
+                                        </tr>
+                                      </tfoot>
                                 </table>
                             </div>
+                        </div> -->
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-1">
+                                    <div class="card-header fs-6 fw-bold text-danger">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        MỰC NƯỚC CÁC KÊNH 
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table" id="DataTramQuanTrac">
+                                            <thead class="table-dark" style="position: sticky;top: 0">
+                                            <tr>
+                                                <th scope="col">Tên Công Trình</th>
+                                                <th scope="col">Mực Nước Thượng Lưu</th>
+                                                <th scope="col">Mực Nước Hạ Lưu</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <!-- id="table-body" -->
+                                                <tr>
+                                                    <td colspan="3" class="fw-bold" style="background-color: #dbf7ff ;">Kênh Đông</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống số 1</td>
+                                                    <td></td>
+                                                    <td>16.68 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>K8</td>
+                                                    <td>16.54 m</td>
+                                                    <td>15.09 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>K13</td>
+                                                    <td>14.96 m</td>
+                                                    <td>14.91 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống điều tiết K20+065</td>
+                                                    <td>14.76 m</td>
+                                                    <td>14.67 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>K27</td>
+                                                    <td>14.51 m</td>
+                                                    <td>14.46 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>K30</td>
+                                                    <td>14.42 m</td>
+                                                    <td>13.70 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống điều tiết K34+333</td>
+                                                    <td>13.57 m</td>
+                                                    <td>13.30 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống tưới kênh N25</td>
+                                                    <td></td>
+                                                    <td>13.49 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" class="fw-bold" style="background-color: #dbf7ff ;">Kênh Tây</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống số 2</td>
+                                                    <td></td>
+                                                    <td>16.44 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>K1+500</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>K13</td>
+                                                    <td>15.91 m</td>
+                                                    <td>15.05 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>K21</td>
+                                                    <td>15.05 m</td>
+                                                    <td>14.27 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>K25</td>
+                                                    <td>14.23 m</td>
+                                                    <td>13.89 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>K32</td>
+                                                    <td>13.88 m</td>
+                                                    <td>13.53 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>K39</td>
+                                                    <td>13.44 m</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" class="fw-bold" style="background-color: #dbf7ff ;">Hồ Phước Hoà</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hồ Phước Hòa</td>
+                                                    <td>43.24 m</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bậc nước K37+501</td>
+                                                    <td>37.67 m</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống điều tiết K0</td>
+                                                    <td></td>
+                                                    <td>41.62 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống điều tiết K6+238</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống điều tiết K15+753</td>
+                                                    <td>40.53 m</td>
+                                                    <td>40.36 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cầu máng Căm xe K28+004</td>
+                                                    <td>39.42 m</td>
+                                                    <td>38.61 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" class="fw-bold" style="background-color: #dbf7ff ;">Kênh Đức Hòa</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống điều tiết K0</td>
+                                                    <td>13.67 m</td>
+                                                    <td>13.71 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống điều tiết K2+238</td>
+                                                    <td>13.69 m</td>
+                                                    <td>13.24 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống điều tiết K4+620</td>
+                                                    <td>12.74 m</td>
+                                                    <td>11.42 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống điều tiết K8+149</td>
+                                                    <td>8.35 m</td>
+                                                    <td>7.80 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Xiphong Đức Hòa</td>
+                                                    <td>4.12 m</td>
+                                                    <td>4.23 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống ngăn lũ Thầy Cai</td>
+                                                    <td>0.99 m</td>
+                                                    <td>0.99 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" class="fw-bold" style="background-color: #dbf7ff ;">Kênh tiêu Phước Hội - Bến Đình</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống điều tiết K1+500</td>
+                                                    <td>15.87 m</td>
+                                                    <td>13.15 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống điều tiết K4+500</td>
+                                                    <td>12.93 m</td>
+                                                    <td>11.40 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cống điều tiết K5+750</td>
+                                                    <td>11.25 m</td>
+                                                    <td></td>
+                                                </tr>
+
+                                            </tbody>
+                                            <tfoot> <!--class="sticky-footer"-->
+                                                <tr>
+                                                  <td><span class="fw-bold">Kênh Dẫn Phước Hoà:</span><br>
+                                                    Lưu Lượng: 25 (m³/s)<br>
+                                                    Mực Nước:  m
+                                                    </td>
+                                                <td></td>
+                                                <td><span class="fw-bold">Phước Đông - Bời Lời:</span><br>
+                                                    Lưu Lượng: 0.65 (m³/s)<br>
+                                                    Mực Nước: 0.87 m
+                                                    </td>
+
+                                                </tr>
+                                              </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-1">
+                                    <div class="card-header fs-6 fw-bold text-danger">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        CÁC TRẠM ĐO MƯA
+                                    </div>
+                                    <div class="table-responsive-1">
+                                        <table class="table" id="DataTramQuanTrac">
+                                            <thead class="table-dark" style="position: sticky;top: 0">
+                                            <tr>
+                                                <th scope="col">Lượng Mưa Trung Bình</th>
+                                                <th scope="col">Hiện Tại</th>
+                                                <th scope="col">1 Ngày</th>
+                                                <th scope="col">3 Ngày</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Trạm mưa Dầu Tiếng</td>
+                                                    <td>1.50 mm</td>
+                                                    <td>22.97 mm</td>
+                                                    <td>22.97 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trạm mưa Đồng Ban</td>
+                                                    <td>0.25 mm</td>
+                                                    <td>8.42 mm</td>
+                                                    <td>9.66 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trạm mưa Kà Tum</td>
+                                                    <td>0 mm</td>
+                                                    <td>0.25 mm</td>
+                                                    <td>0.99 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trạm mưa Lộc Ninh</td>
+                                                    <td>0.25 mm</td>
+                                                    <td>0.25 mm</td>
+                                                    <td>0.25 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trạm mưa Lộc Thành</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trạm mưa Lộc Thiện</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trạm mưa Minh Hòa</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trạm mưa Minh Tâm</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trạm mưa Tân Hà</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trạm mưa Tân Hòa 1</td>
+                                                    <td>0.24 mm</td>
+                                                    <td>2.42 mm</td>
+                                                    <td>2.42 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trạm mưa Tân Hòa 2</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trạm mưa Tân Thành</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trạm mưa Thanh Lương</td>
+                                                    <td>0 mm</td>
+                                                    <td>0 mm</td>
+                                                    <td>0.69 mm</td>
+                                                </tr>
+                                                <tr class="fw-bold" style="background-color: #dbf7ff ;">
+                                                    <td >Trung bình các trạm</td>
+                                                    <td>0.21 mm</td>
+                                                    <td>2.7 mm</td>
+                                                    <td>3 mm</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
     </div>
 
@@ -123,40 +427,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="scripts.js"></script>
-        <!--Script Muc Nuoc-->
-<script src="Test-API/wwwroot/jquery-3.6.0.min.js"></script>
-<script>
-  let Dulieumucnuoc = {
-    apiKey: "7001",
-    fetchDulieumucnuoc: function () {
-      fetch(
-        "https://apiv2.thuyloivietnam.vn/Api/getSoLieuQuanTrac?Key=apiktdlqtDauTieng&MaQuanTrac=" + this.apiKey
-      )
-        .then((response) => {
-          if (!response.ok) {
-            alert("API connection failed");
-            throw new Error("API connection failed");
-          }
-          return response.json();
-        })
-        .then((data) => this.displayDulieumucnuoc(data));
-    },
-    displayDulieumucnuoc: function (data) {
-      const dataLength = data.length;
-      const GiaTri = data[dataLength - 1].GiaTri;
-      document.getElementById("wrapper-GiaTri").innerHTML = GiaTri + "m";
-    }
-
-  }
-</script>
-
-<script>
-  $(document).ready(function () {
-    Dulieumucnuoc.fetchDulieumucnuoc();
-  });
-</script>
-<!--End Script Muc Nuoc-->
 </body>
 
 </html>
