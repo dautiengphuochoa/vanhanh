@@ -28,13 +28,52 @@ var $el = $(".table-responsive");
 function anim() {
   var st = $el.scrollTop();
   var sb = $el.prop("scrollHeight")-$el.innerHeight();
-  $el.animate({scrollTop: st<sb/1 ? sb : 0}, 5000, anim);
+  $el.animate({scrollTop: st<sb/1 ? sb : 0}, 18000, anim);
 }
 function stop(){
   $el.stop();
 }
 anim();
 $el.hover(stop, anim);
+
+
+
+let Dulieumucnuoc = {
+    apiKey: "7001",
+    fetchDulieumucnuoc: function () {
+      fetch(
+        "https://apiv2.thuyloivietnam.vn/Api/getSoLieuQuanTrac?Key=apiktdlqtDauTieng&MaQuanTrac=" + this.apiKey
+      )
+        .then((response) => {
+          if (!response.ok) {
+            alert("API connection failed");
+            throw new Error("API connection failed");
+          }
+          return response.json();
+        })
+        .then((data) => this.displayDulieumucnuoc(data));
+    },
+    displayDulieumucnuoc: function (data) {
+      const dataLength = data.length;
+      const GiaTri = data[dataLength - 1].GiaTri;
+      document.getElementById("wrapper-GiaTri").innerHTML = GiaTri + " m";
+    }
+
+  }
+  $(document).ready(function () {
+    Dulieumucnuoc.fetchDulieumucnuoc();
+  });
+
+
+ 
+var today = new Date();
+var time = today.getHours() + " : " + today.getMinutes() + " : " + today.getSeconds();
+document.getElementById("giohientai").innerHTML = time;
+ 
+
+var today = new Date();
+var date = today.getDate()+' / '+(today.getMonth()+1)+' / '+today.getFullYear();
+document.getElementById("ngayhientai").innerHTML = date;
 
 
 window.addEventListener('DOMContentLoaded', event => {

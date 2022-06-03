@@ -2,8 +2,7 @@ body  {
     font-family:Arial, Helvetica, sans-serif;
      background: url('img/do-alpha.png') no-repeat fixed center; 
         /* background-color: white;  */
-    background-size: cover;
-    
+    background-size: cover;   
 }
 
 
@@ -69,11 +68,11 @@ hr {
 }
 
 .bg-pastel-1{
-    background-color: #d1f0f9;
+    background-color: #f0fbfe;
   }
   
   .bg-pastel-2{
-    background-color: #d1fcf6;
+    background-color: #e8faf8;
   }
   
   .bg-pastel-3{
@@ -81,14 +80,37 @@ hr {
   }
   
   .bg-pastel-4{
-    background-color: #ffd3db;
+    background-color: #f9e1e5;
   }
   
   .table-responsive{
-    height: 450px;;
+    height: 640px;
     overflow-y: auto;
     /* border:2px solid #444; */
-  }.table-responsive:hover{border-color:rgb(188, 226, 255);}
+  }
+  
+  .table-responsive:hover{border-color:rgb(188, 226, 255);}
   
   table{width:100%;}
-  td{padding:10px; background:none;}
+  td{padding:1px; background:none;}
+
+
+/* .sticky-footer{
+    position: sticky;
+} */
+
+/* table tfoot {
+    position: sticky;
+    bottom: 0;
+     z-index: 1; 
+  }
+
+  table tfoot tr {
+    padding: 3px;
+    width: 25vw;
+    background: lightyellow;
+  } */
+
+  ::-webkit-scrollbar {
+    display: none;
+}
