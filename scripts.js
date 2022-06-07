@@ -7,22 +7,22 @@
 // Scripts
 
 //Script Tram Quan Trac
-// fetch("https://apiv2.thuyloivietnam.vn/Api/getSoLieuQuanTrac?Key=apiktdlqtDauTieng&MaQuanTrac=7001").then((data)=>{
-//     // console.log(data); //json format
-//     return data.json(); //convert to object
-// }).then((objectData)=>{
-//     console.log(objectData[0].ThoiGian);
-//     let tableData ="";
-//     objectData.map((values)=>{
-//         tableData+=`
-//         <tr>
-//         <td>${values.ThoiGian}</td>
-//         <td>${values.MaQuanTrac}</td>
-//         <td>${values.GiaTri}</td>
-//       </tr>`;
-//     });
-//     document.getElementById("table-body").innerHTML=tableData;
-// })
+fetch("https://apiv2.thuyloivietnam.vn/Api/getSoLieuQuanTrac?Key=apiktdlqtDauTieng&MaQuanTrac=7001").then((data)=>{
+    // console.log(data); //json format
+    return data.json(); //convert to object
+}).then((objectData)=>{
+    console.log(objectData[0].ThoiGian);
+    let tableData ="";
+    objectData.map((values)=>{
+        tableData+=`
+        <tr>
+        <td>${values.ThoiGian}</td>
+        <td>${values.MaQuanTrac}</td>
+        <td>${values.GiaTri}</td>
+      </tr>`;
+    });
+    document.getElementById("table-body").innerHTML=tableData;
+})
 
 // Script Table Run
 var $el = $(".table-responsive");
@@ -64,20 +64,35 @@ let Dulieumucnuoc = {
   $(document).ready(function () {
     Dulieumucnuoc.fetchDulieumucnuoc();
   });
-
-
  
-var today = new Date();
-var time = today.getHours() + " : " + today.getMinutes() + " : " + today.getSeconds();
-document.getElementById("giohientai").innerHTML = time;
- 
+// var today = new Date();
+// var time = today.getHours() + " : " + today.getMinutes() + " : " + today.getSeconds();
+// document.getElementById("giohientai").innerHTML = time;
 
+//Gio hien tai
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('giohientai').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+ 
+//Ngay hien tai
 var today = new Date();
 var date = today.getDate()+' / '+(today.getMonth()+1)+' / '+today.getFullYear();
 document.getElementById("ngayhientai").innerHTML = date;
 
-window.addEventListener('DOMContentLoaded', event => {
 
+window.addEventListener('DOMContentLoaded', event => {
     // Toggle the side navigation
     const sidebarToggle = document.body.querySelector('#sidebarToggle');
     if (sidebarToggle) {
