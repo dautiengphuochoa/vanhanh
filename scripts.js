@@ -5,10 +5,8 @@
     */
     // 
 // Scripts
-// 
 
-//Scrpipt Tram Quan Trac
-
+//Script Tram Quan Trac
 fetch("https://apiv2.thuyloivietnam.vn/Api/getSoLieuQuanTrac?Key=apiktdlqtDauTieng&MaQuanTrac=7001").then((data)=>{
     // console.log(data); //json format
     return data.json(); //convert to object
@@ -26,6 +24,7 @@ fetch("https://apiv2.thuyloivietnam.vn/Api/getSoLieuQuanTrac?Key=apiktdlqtDauTie
     document.getElementById("table-body").innerHTML=tableData;
 })
 
+// Script Table Run
 var $el = $(".table-responsive");
 function anim() {
   var st = $el.scrollTop();
@@ -76,23 +75,6 @@ document.getElementById("giohientai").innerHTML = time;
 var today = new Date();
 var date = today.getDate()+' / '+(today.getMonth()+1)+' / '+today.getFullYear();
 document.getElementById("ngayhientai").innerHTML = date;
-
-
-
-// fetch('https://apiv2.thuyloivietnam.vn/Api/getSoLieuQuanTrac?Key=apiktdlqtDauTieng&MaQuanTrac=7001', {
-//   method: 'post',
-//   headers: {
-//     "Content-type": "application/json; charset=UTF-8"
-//   },
-//   body:JSON.stringify(options)
-// }).then(function(res){
-//   return res.json(); //error here
-// }).then(function(data){
-//   console.log(data);
-// }).catch((error) => {
-//   console.log(error);
-// });
-
 
 window.addEventListener('DOMContentLoaded', event => {
 
