@@ -57,13 +57,16 @@ let Dulieumucnuoc = {
     displayDulieumucnuoc: function (data) {
       const dataLength = data.length;
       const GiaTri = data[dataLength - 1].GiaTri;
-      document.getElementById("wrapper-GiaTri").innerHTML = GiaTri + " m";
+      let n = GiaTri.toFixed(2);
+      document.getElementById("wrapper-GiaTri").innerHTML = n + " m";
     }
 
   }
   $(document).ready(function () {
     Dulieumucnuoc.fetchDulieumucnuoc();
   });
+
+// document.getElementById('wrapper-GiaTri').innerHTML = Number(1).toFixed(2);
  
 // var today = new Date();
 // var time = today.getHours() + " : " + today.getMinutes() + " : " + today.getSeconds();
